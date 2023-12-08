@@ -35,7 +35,7 @@ def mobius_function(n):
 def lcm_of_multiple_numbers(numbers):
     lcm, *numbers = numbers
     for number in numbers:
-        lcm = math.lcm(lcm, number)
+        lcm = lcm * number // math.gcd(lcm, number)
     return lcm
 
 
